@@ -1,0 +1,13 @@
+package com.screen.resume_screener;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ScreenApiApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
