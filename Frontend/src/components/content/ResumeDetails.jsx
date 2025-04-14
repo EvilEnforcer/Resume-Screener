@@ -92,9 +92,9 @@ export default function ResumeDetails(props) {
 
             {errorMessage && <p className="details-error-message">{errorMessage}</p>}
 
-            <button className="submit-button" onClick={handleSubmit}>
+            {!loading && <button className="submit-button" onClick={handleSubmit}>
                 Submit
-            </button>
+            </button>}
 
             {loading && !errorMessage && (
                 <div className="upload-status">
