@@ -9,7 +9,7 @@ export default function DownloadPage(props) {
     const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
-        fetch("http://3.137.193.199:8080/document/myfiles", {
+        fetch("http://18.118.160.111:8080/document/myfiles", {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`
@@ -44,7 +44,7 @@ export default function DownloadPage(props) {
         setErrorMessage("");
 
         try {
-            const res = await fetch(`http://3.137.193.199:8080/document/download/${file.id}`, {
+            const res = await fetch(`http://18.118.160.111:8080/document/download/${file.id}`, {
                 method: "GET",
                 credentials: "include",
                 headers: {

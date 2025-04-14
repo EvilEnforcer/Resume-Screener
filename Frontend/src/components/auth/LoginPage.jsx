@@ -36,7 +36,7 @@ function LoginPage(props) {
         const username = usernameRef.current.value;
         const password = passwordRef.current.value;
 
-        fetch("http://3.137.193.199:8080/auth/login", {
+        fetch("http://18.118.160.111:8080/auth/login", {
             method: "POST",
             credentials: "include",
             headers: {

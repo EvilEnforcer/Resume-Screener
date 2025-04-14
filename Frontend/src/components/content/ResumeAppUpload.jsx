@@ -14,7 +14,7 @@ export default function ResumeApp(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://3.137.193.199:8080/document/myfiles", {
+    fetch("http://18.118.160.111:8080/document/myfiles", {
       method: "GET",
       credentials: "include",
       headers: {
@@ -61,7 +61,7 @@ export default function ResumeApp(props) {
     const formData = new FormData();
     formData.append("file", file);
 
-    fetch("http://3.137.193.199:8080/document/upload", {
+    fetch("http://18.118.160.111:8080/document/upload", {
       method: "POST",
       credentials: "include",
       headers: {
