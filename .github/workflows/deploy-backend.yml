@@ -41,8 +41,8 @@ jobs:
           # Clean up temp
           rm -rf ~/deploy-temp
 
-	  cd ~/myapp/backend
-	  ./mvnw clean package -DskipTests
+          cd ~/myapp/backend
+          ./mvn clean package -DskipTests
 
           # Rebuild containers
           cd ~/myapp
