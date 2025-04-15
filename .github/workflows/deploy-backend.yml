@@ -42,7 +42,7 @@ jobs:
           rm -rf ~/deploy-temp
 
           cd ~/myapp/backend
-          ./mvn clean package -DskipTests
+          mvn clean package -DskipTests
 
           # Rebuild containers
           cd ~/myapp
