@@ -6,6 +6,8 @@ import ResumeApp from './components/structural/ResumeApp.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// CI/CD tester
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ResumeApp />
