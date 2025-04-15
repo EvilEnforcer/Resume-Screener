@@ -28,7 +28,7 @@ jobs:
 
           # Clean up temp dir and re-clone
           rm -rf ~/deploy-temp
-          git clone https://${{ secrets.GH_PAT }}github.com/EvilEnforcer/Resume-Screener.git ~/deploy-temp
+          git clone https://${{ secrets.GH_PAT }}@github.com/EvilEnforcer/Resume-Screener.git ~/deploy-temp
 
           # Replace backend (Spring Boot)
           rm -rf ~/myapp/backend
