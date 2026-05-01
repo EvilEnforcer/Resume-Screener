@@ -11,7 +11,7 @@ from docx import Document
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # ✅ Use the correct Gemini model for chat-style interaction
-model = genai.GenerativeModel("models/gemini-1.5-pro")
+model = genai.GenerativeModel("models/gemini-2.5-flash")
 
 
 def extract_pdf_text(binary_data):
@@ -171,7 +171,15 @@ def analyze_resume(resume_b64, job_title, job_description):
                 "error": "Gemini response was not JSON. Prompt may need adjustment."
             }
 
+
     except Exception as e:
+
+        import traceback
+
+        traceback.print_exc()
+
         return {
+
             "error": f"Failed to analyze resume: {str(e)}"
+
         }

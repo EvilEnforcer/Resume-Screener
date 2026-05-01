@@ -1,2 +1,33 @@
+# OS junk
 .DS_Store
 .Rhistory
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Secrets
+.env
+.env.local
+
+# Build outputs
+target/
+dist/
+build/
+*.class
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Logs
+*.log

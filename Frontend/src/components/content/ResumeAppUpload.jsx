@@ -14,7 +14,7 @@ export default function ResumeApp(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://18.118.160.111:8080/document/myfiles", {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/document/myfiles`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -61,7 +61,7 @@ export default function ResumeApp(props) {
     const formData = new FormData();
     formData.append("file", file);
 
-    fetch("http://18.118.160.111:8080/document/upload", {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/document/upload`, {
       method: "POST",
       credentials: "include",
       headers: {

@@ -9,7 +9,7 @@ export default function DownloadPage(props) {
     const [errorMessage, setErrorMessage] = useState("");
 
     useEffect(() => {
-        fetch("http://18.118.160.111:8080/document/myfiles", {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/document/myfiles`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("jwtToken")}`
@@ -44,7 +44,7 @@ export default function DownloadPage(props) {
         setErrorMessage("");
 
         try {
-            const res = await fetch(`http://18.118.160.111:8080/document/download/${file.id}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/document/download/${file.id}`, {
                 method: "GET",
                 credentials: "include",
                 headers: {

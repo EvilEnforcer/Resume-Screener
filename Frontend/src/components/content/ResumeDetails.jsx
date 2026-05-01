@@ -23,7 +23,7 @@ export default function ResumeDetails(props) {
             return
         }
 
-        fetch(`http://18.118.160.111:8080/document/analyze/${props.fileid}`, {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/document/analyze/${props.fileid}`, {
             method: "POST",
             credentials: "include",
             headers: {

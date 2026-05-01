@@ -36,7 +36,7 @@ function LoginPage(props) {
         const username = usernameRef.current.value;
         const password = passwordRef.current.value;
 
-        fetch("http://18.118.160.111:8080/auth/login", {
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/login`, {
             method: "POST",
             credentials: "include",
             headers: {

@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from app.resume_analyzer import analyze_resume
 from app.models import JobRequest
+import traceback
 
 resume_routes = Blueprint('resume_routes', __name__)
 
@@ -30,5 +31,9 @@ def analyze_resume_route():
 
         return jsonify(result)
 
+
     except Exception as e:
+
+        traceback.print_exc()
+
         return jsonify({"error": f"Unexpected server error: {str(e)}"}), 500

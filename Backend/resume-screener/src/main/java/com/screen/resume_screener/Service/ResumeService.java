@@ -2,6 +2,7 @@ package com.screen.resume_screener.Service;
 
 import com.screen.resume_screener.dto.JobRequest;
 import com.screen.resume_screener.dto.JobResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -14,6 +15,9 @@ import java.util.Map;
 
 @Service
 public class ResumeService {
+
+    @Value("${ai.service.url}")
+    private String aiServiceUrl;
 
     public JobResponse callPythonAnalyzer(String base64Resume, JobRequest jobRequest) {
 
@@ -30,7 +34,7 @@ public class ResumeService {
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(request,httpHeaders);
 
         ResponseEntity<JobResponse> response = restTemplate.postForEntity(
-                "http://flaskapi:5000/analyze-resume", entity, JobResponse.class
+                aiServiceUrl + "/analyze-resume", entity, JobResponse.class
         );
 
         return response.getBody();
