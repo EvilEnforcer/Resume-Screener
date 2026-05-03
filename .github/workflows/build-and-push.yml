@@ -23,8 +23,6 @@ jobs:
             context: ./Backend/resume-screener
           - name: flaskapi
             context: ./Backend/bert-api
-          - name: frontend
-            context: ./Frontend
 
     steps:
       - name: Checkout
@@ -59,8 +57,6 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          build-args: |
-            VITE_API_BASE_URL=/api
 
   deploy:
     needs: build
