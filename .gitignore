@@ -10,8 +10,9 @@ Thumbs.db
 *.swp
 
 # Secrets
-.env
+/.env
 .env.local
+!Frontend/.env
 
 # Build outputs
 target/
