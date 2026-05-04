@@ -321,9 +321,6 @@ function WizardPage() {
                 <div className="h-full w-1/3 bg-[image:var(--gradient-primary)] animate-[indeterminate_1.6s_ease-in-out_infinite]" />
               </div>
             </div>
-            <p className="mt-6 text-xs text-muted-foreground">
-              This usually takes 15–30 seconds.
-            </p>
           </div>
         )}
       </Card>
